@@ -1,6 +1,7 @@
 import App from 'App';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {QueryClient, QueryClientProvider} from 'react-query';
 import reportWebVitals from 'reportWebVitals';
 import {createGlobalStyle, ThemeProvider} from 'styled-components';
 import {theme} from 'theme';
@@ -23,11 +24,26 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    mutations: {
+      retry: true,
+    },
+    queries: {
+      staleTime: Infinity,
+      refetchOnWindowFocus: true,
+      retry: true,
+    },
+  },
+});
+
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
     <ThemeProvider theme={theme}>
-      <App />
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
