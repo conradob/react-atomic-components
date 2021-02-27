@@ -1,12 +1,13 @@
-import './App.css';
+import {Header} from 'components/Header';
+import {Layout} from 'components/Layout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <Layout>
+      <Header>
         <p>Omnipresent Frontend Challenge</p>
-      </header>
-    </div>
+      </Header>
+    </Layout>
   );
 }
 
