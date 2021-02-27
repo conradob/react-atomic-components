@@ -6,6 +6,8 @@ declare module 'styled-components' {
       main: string;
       background: string;
       backgroundContrast: string;
+      borderMain: string;
+      boxBackground: string;
     };
   }
 }
