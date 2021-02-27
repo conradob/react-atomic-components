@@ -1,3 +1,6 @@
+import {BoxContainer} from 'components/BoxContainer';
+import {BoxHeader} from 'components/BoxHeader';
+import {IssueListItem} from 'components/IssueListItem';
 import {useParams} from 'react-router';
 import {useIssuesList} from 'utils/issues-list';
 
@@ -9,7 +12,18 @@ export const Issues = () => {
     <div>
       {isError ? <p>{error || 'Error processing your request'}</p> : null}
       {isLoading ? <p>Loading...</p> : null}
-      {isSuccess ? (issues || []).map((el) => <p key={el.id}>{el.title}</p>) : null}
+      {isSuccess ? (
+        <BoxContainer>
+          <BoxHeader>
+            <details>
+              <summary>Author</summary>
+            </details>
+          </BoxHeader>
+          {(issues || []).map((issue) => (
+            <IssueListItem key={issue.id} issue={issue} />
+          ))}
+        </BoxContainer>
+      ) : null}
     </div>
   );
 };
