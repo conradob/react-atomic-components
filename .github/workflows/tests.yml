@@ -1,0 +1,35 @@
+name: Tests
+
+on: [push]
+
+jobs:
+  unit-tests:
+    name: Unit tests
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Instal deps
+        uses: bahmutov/npm-install@v1
+
+      - name: Run tests
+        run: npm t
+  
+  e2e-tests:
+    name: End-to-end tests
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Instal web deps
+      uses: bahmutov/npm-install@v1
+
+    - name: Start server in the background
+      run: npm start &
+
+    - name: Install Cypress and run tests
+      uses: cypress-io/github-action@v2
+      with:
+        working-directory: e2e
