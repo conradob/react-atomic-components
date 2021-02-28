@@ -18,6 +18,7 @@
 - [Jest](https://jestjs.io/) JS Testing Framework.
 - [Testing Library](https://testing-library.com/) Testing utilities
 - [Cypress](https://www.cypress.io/) End-to-end testing.
+- [Docker](https://www.docker.com/) Run application and services in containers.
 
 ## Todos
 - [ ] Fields to list issues from other repositories
@@ -58,21 +59,31 @@ Your app is ready to be deployed!
 
 ## End-to-end
 
-### Installation
+### With containers
+
+It's possible to run E2E tests with containers using [Docker](https://www.docker.com/)
+
+```sh
+docker-compose up
+```
+
+### Whout containers
+
+##### Installation
 
 ```sh
 cd e2e
 npm install
 ```
 
-### Available Scripts
+##### Available Scripts
 
 Make sure to start the react app before running the following scripts.
 
-#### `npx cypress open`
+###### `npx cypress open`
 
 Opens the Cypress Test Runner.
 
-#### `npx cypress run`
+###### `npx cypress run`
 
 Run all tests headlessly in the Electron browser.
