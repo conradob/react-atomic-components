@@ -66,12 +66,12 @@
     "prettier": "2.2.1"
   },
   "lint-staged": {
-    "./src/**/*.{js,jsx,ts,tsx}": [
+    "./{src,e2e}/**/*.{js,jsx,ts,tsx}": [
       "npm run organize-imports",
       "npm run format",
       "npm run lint"
     ],
-    "./src/**/*.{json,md,mdx,css,html,yml,yaml,scss}": [
+    "./{src,e2e}/**/*.{json,md,mdx,css,html,yml,yaml,scss}": [
       "npm run format"
     ]
   }
