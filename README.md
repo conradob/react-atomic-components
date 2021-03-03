@@ -1,4 +1,5 @@
-# Omnipresent Frontend Challenge
+# Omnipresent Frontend Challenge 
+[![Actions Status](https://github.com/conradob/omnipresent-challenge/actions/workflows/tests.yml/badge.svg)](https://github.com/conradob/omnipresent-challenge/actions)
 
 ## Features
 
