@@ -1,5 +1,5 @@
-# Omnipresent Frontend Challenge 
-[![Actions Status](https://github.com/conradob/omnipresent-challenge/actions/workflows/tests.yml/badge.svg)](https://github.com/conradob/omnipresent-challenge/actions)
+# React atomic components
+[![Actions Status](https://github.com/conradob/omnipresent-challenge/actions/workflows/tests.yml/badge.svg)](https://github.com/conradob/react-atomic-components/actions)
 
 ## Features
 
